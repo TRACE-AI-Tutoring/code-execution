@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {"name": "TRACE: run everything", "type": "debugpy", "request": "launch",
+     "program": "${workspaceFolder}/run_all.py", "cwd": "${workspaceFolder}", "console": "integratedTerminal"},
+    {"name": "TRACE: main + figures + tables (fast)", "type": "debugpy", "request": "launch",
+     "program": "${workspaceFolder}/run_all.py", "cwd": "${workspaceFolder}", "console": "integratedTerminal",
+     "args": ["--stages", "replication", "calibration", "main", "figures", "tables"]},
+    {"name": "TRACE: recalibrate simulator from scratch", "type": "debugpy", "request": "launch",
+     "program": "${workspaceFolder}/run_all.py", "cwd": "${workspaceFolder}", "console": "integratedTerminal",
+     "args": ["--stages", "calibration", "bkt", "--recalibrate"]}
+  ]
+}
